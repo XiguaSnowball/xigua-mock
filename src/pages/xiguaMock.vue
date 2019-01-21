@@ -24,7 +24,7 @@
                     <span style='float: left'>{{ item }}</span>
                   </el-option>
                 </el-select>
-                  <el-button  slot="append" icon='el-icon-search' @click='getAllList' >搜索</el-button>
+                  <el-button  slot="append" icon='el-icon-search' @click='getAllList' ></el-button>
                 </el-input>
                 &nbsp;
 
