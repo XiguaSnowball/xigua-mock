@@ -514,7 +514,7 @@ export default {
       this.arrayListForPageMock.tableDataOfMockInfoForView = row
       vm.$notify({
         title: vm.resultInfo.resultMsg,
-        message: '暂不支持发送功能，测试调用地址：http://172.16.156.67:5203+URL',
+        message: '暂不支持发送功能，测试调用地址：http://10.7.8.14:5203+URL',
         type: 'success',
         position: 'top-right',
         offset: 100,

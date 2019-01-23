@@ -16,6 +16,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "element-ui": "^2.4.11",
+    "npm": "^6.6.0",
     "peer": "^0.2.10",
     "vue": "^2.5.2",
     "vue-markdown": "^2.2.4",
