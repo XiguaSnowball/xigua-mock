@@ -3,7 +3,7 @@
     <section class='flipInX animated'>
       <div class='container' style='border-bottom: 0px;margin-bottom: 0px;'>
         <h1>
-          <span>XIGUA-MOCK</span>
+          <span>MISSFRESH-MOCK</span>
         </h1>
       </div>
       <div class='container'

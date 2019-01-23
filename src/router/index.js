@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import wiki from '@/pages/wiki/wiki'
-import xiguaMock from '@/pages/xiguaMock'
+import missfreshMock from '@/pages/missfreshMock'
 
 Vue.use(Router)
 
@@ -18,9 +18,9 @@ export default new Router({
             component: wiki
         },
         {
-            path: '/xiguaMock',
-            name: 'xiguaMock',
-            component: xiguaMock
+            path: '/missfreshMock',
+            name: 'missfreshMock',
+            component: missfreshMock
         }
     ]
 })
