@@ -484,7 +484,7 @@ export default {
     getAllList () {
       this.listTopScroll()
       var vm = this
-      this.$axios.get('/apis' + this.urlOfGetAllList, {
+      this.$axios.get(this.urlOfGetAllList, {
         params: {
           title: this.getAllListInput.title,
           project_name: this.getAllListInput.projectName,
@@ -514,7 +514,7 @@ export default {
       this.arrayListForPageMock.tableDataOfMockInfoForView = row
       vm.$notify({
         title: vm.resultInfo.resultMsg,
-        message: '暂不支持发送功能，测试调用地址：http://10.7.8.14:5203+URL',
+        message: '暂不支持发送功能，测试调用地址：http://172.16.156.67:5203+URL',
         type: 'success',
         position: 'top-right',
         offset: 100,
@@ -524,7 +524,7 @@ export default {
     },
     getProjectNameList () {
       var vm = this
-      this.$axios.get('/apis' + this.urlOfProjectNameAllList, {}).then(function (response) {
+      this.$axios.get(this.urlOfProjectNameAllList, {}).then(function (response) {
         if (response.data.code === 0) {
           vm.resultInfo.resultMsg = response.data.msg
           vm.arrayListForPageMock.selectDataOfGetAllProjectName = response.data.data
@@ -553,7 +553,7 @@ export default {
       this.$refs[formName].validate((valid) => {
         if (valid) {
           // debugger
-          this.$axios.post('/apis' + this.urlOfaddMockData, fd).then(function (response) {
+          this.$axios.post(this.urlOfaddMockData, fd).then(function (response) {
             if (response.data.code === 0) {
               vm.resultInfo.resultMsg = response.data.msg
               vm.$notify({
@@ -585,7 +585,7 @@ export default {
       var vm = this
       var fd = new FormData()
       fd.append('id', id)
-      this.$axios.post('/apis' + this.urlOfCopyMockData, fd).then(function (response) {
+      this.$axios.post(this.urlOfCopyMockData, fd).then(function (response) {
         if (response.data.code === 0) {
           vm.resultInfo.resultMsg = response.data.msg
           vm.$notify({
@@ -614,7 +614,7 @@ export default {
       var fd = new FormData()
       fd.append('id', id)
       fd.append('status', status)
-      this.$axios.post('/apis' + this.urlOfManageMockData, fd).then(function (response) {
+      this.$axios.post(this.urlOfManageMockData, fd).then(function (response) {
         if (response.data.code === 0) {
           vm.resultInfo.resultMsg = response.data.msg
           vm.$notify({
@@ -643,7 +643,7 @@ export default {
       var fd = new FormData()
       fd.append('id', id)
       fd.append('ischeck', ischeck)
-      this.$axios.post('/apis' + this.urlOfIscheckManageMockData, fd).then(function (response) {
+      this.$axios.post(this.urlOfIscheckManageMockData, fd).then(function (response) {
         if (response.data.code === 0) {
           vm.resultInfo.resultMsg = response.data.msg
           vm.$notify({
@@ -678,7 +678,7 @@ export default {
         })
         this.arrayListForPageMock.delIdsInput = this.arrayListForPageMock.delIds
       }
-      this.$axios.post('/apis' + this.urlOfDelMockData, {
+      this.$axios.post(this.urlOfDelMockData, {
         ids: this.arrayListForPageMock.delIdsInput
       }).then(function (response) {
         if (response.data.code === 0) {
@@ -723,7 +723,7 @@ export default {
       fd.append('des', this.arrayListForPageMock.tableDataOfMockInfoForUpdate.description)
       fd.append('domain', this.arrayListForPageMock.tableDataOfMockInfoForUpdate.domain)
       fd.append('ischeck', this.arrayListForPageMock.tableDataOfMockInfoForUpdate.ischeck)
-      this.$axios.post('/apis' + this.urlOfEditMockData, fd).then(function (response) {
+      this.$axios.post(this.urlOfEditMockData, fd).then(function (response) {
         if (response.data.code === 0) {
           vm.resultInfo.resultMsg = response.data.msg
           vm.$notify({

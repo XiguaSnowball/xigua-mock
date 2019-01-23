@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import wiki from '@/pages/wiki/wiki'
-import missfreshMock from '@/pages/missfreshMock'
+import missfreshMock from '@/pages/xiguaMock'
 
 Vue.use(Router)
 

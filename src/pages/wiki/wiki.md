@@ -1,4 +1,4 @@
-Welcome to the xiguaMock wiki!
+Welcome to the MissfreshMock wiki!
 #### 数据模板中的每个属性由 3 部分构成：属性名、生成规则、属性值：
 ```
 // 属性名   name

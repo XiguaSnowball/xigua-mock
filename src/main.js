@@ -9,14 +9,17 @@ import 'element-ui/lib/theme-chalk/index.css'
 
 
 Vue.config.productionTip = false
-Vue.prototype.$axios = axios
+const instance = axios.create({
+    baseURL: '/:5202'
+})
+Vue.prototype.$axios = instance
 Vue.use(ElementUI)
 
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
+    el: '#app',
+    router,
+    components: { App },
+    template: '<App/>'
 })
